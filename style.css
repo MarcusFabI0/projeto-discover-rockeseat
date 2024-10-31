@@ -32,6 +32,7 @@ body {
 
   /* tudo acima feito em uma linha só, chamado de shorthand ou atalho */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -72,6 +73,7 @@ body * {
   /* usando margin para posicionamento de display block */
   margin: 4px auto;
 }
+
 /* o translate -50% serve pra colocar 50% do elemento pra cima, e o top coloca em 50% do topo*/
 #switch button {
   width: 32px;
@@ -167,4 +169,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media-queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg)
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop.jpg)
+  }
 }

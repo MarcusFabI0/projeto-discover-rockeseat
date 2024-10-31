@@ -86,13 +86,16 @@ body * {
   left: 0;
   transform: translateY(-50%);
   top: 50%;
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
 }
 
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
 
 /* span por padrão tem display inline, cujo não aceita algumas propriedades, tipo a largura, entao tem que transformar em block*/
 #switch span {
@@ -179,5 +182,25 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop.jpg)
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
   }
 }
